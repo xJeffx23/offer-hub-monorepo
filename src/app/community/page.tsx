@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
 import HeroRepoStatsSection from "@/components/community/HeroRepoStatsSection";
+import ContributorsSection from "@/components/community/ContributorsSection";
+import HowToContribute from "@/components/community/HowToContribute";
+import RecentPRsSection, { PullRequestData } from "@/components/community/RecentPRsSection";
+import OpenIssuesSection from "@/components/community/OpenIssuesSection";
+import RepoLinksSection from "@/components/community/RepoLinksSection";
+import CommunityChannelsSection from "@/components/community/CommunityChannelsSection";
+import RegistrationForm from "@/components/community/RegistrationForm";
+import LoadingBar from "@/components/ui/LoadingBar";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Community",
@@ -14,16 +24,6 @@ export const metadata: Metadata = {
     "contribute",
   ],
 };
-import ContributorsSection from "@/components/community/ContributorsSection";
-import HowToContribute from "@/components/community/HowToContribute";
-import RecentPRsSection, { PullRequestData } from "@/components/community/RecentPRsSection";
-import OpenIssuesSection from "@/components/community/OpenIssuesSection";
-import RepoLinksSection from "@/components/community/RepoLinksSection";
-import CommunityChannelsSection from "@/components/community/CommunityChannelsSection";
-import RegistrationForm from "@/components/community/RegistrationForm";
-import LoadingBar from "@/components/ui/LoadingBar";
-import { Footer } from "@/components/layout/Footer";
-import { Navbar } from "@/components/layout/Navbar";
 
 interface RepoStats {
   stars: string;
