@@ -24,7 +24,14 @@ const docSections = [
   {
     icon: <Terminal />,
     title: "API Reference",
-    description: "Complete REST API documentation with authentication, endpoints, and webhooks.",
+    description: (
+      <>
+        Complete REST API documentation with authentication, endpoints, and webhooks.{" "}
+        <a href="/openapi.json" target="_blank" className="text-theme-primary hover:underline font-bold mt-1 inline-block">
+          View OpenAPI Spec
+        </a>
+      </>
+    ),
     link: "/docs/api-reference/overview",
     count: "3 articles"
   },
