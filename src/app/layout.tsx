@@ -21,13 +21,21 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#0e9898" },
+    { media: "(prefers-color-scheme: dark)",  color: "#0a0a0a" },
+  ],
+};
+
 export const metadata: Metadata = {
   title: {
-    default: "OFFER-HUB",
+    default: "OFFER-HUB | The Future of On-Chain Bounties",
     template: "%s | OFFER-HUB",
   },
   description:
     "OFFER-HUB empowers marketplaces to provide secure, non-custodial escrow payments without building complex payment infrastructure.",
+  metadataBase: new URL("https://offer-hub.tech"),
 
   // ── Favicon & icon variants ──────────────────────────────────────────────
   icons: {
@@ -58,30 +66,32 @@ export const metadata: Metadata = {
   // ── PWA manifest ──────────────────────────────────────────────────────────
   manifest: "/site.webmanifest",
 
-  // ── Theme colour (browser chrome on Android / Safari pinned tab) ──────────
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0e9898" },
-    { media: "(prefers-color-scheme: dark)",  color: "#0a0a0a" },
-  ],
-
   // ── Open Graph ────────────────────────────────────────────────────────────
   openGraph: {
-    title: "OFFER-HUB",
+    title: "OFFER-HUB | The Future of On-Chain Bounties",
     description:
       "OFFER-HUB empowers marketplaces to provide secure, non-custodial escrow payments without building complex payment infrastructure.",
+    url: "https://offer-hub.tech",
     siteName: "OFFER-HUB",
-    images: [{ url: "/android-chrome-512x512.png", width: 512, height: 512 }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "OFFER-HUB - Secure, non-custodial escrow for your marketplace",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
 
   // ── Twitter / X card ─────────────────────────────────────────────────────
   twitter: {
-    card: "summary",
-    title: "OFFER-HUB",
+    card: "summary_large_image",
+    title: "OFFER-HUB | The Future of On-Chain Bounties",
     description:
       "OFFER-HUB empowers marketplaces to provide secure, non-custodial escrow payments without building complex payment infrastructure.",
-    images: ["/android-chrome-512x512.png"],
+    images: ["/og-image.png"],
   },
 };
 

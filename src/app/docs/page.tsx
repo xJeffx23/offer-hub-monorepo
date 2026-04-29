@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import DocsSearchBar from "@/components/docs/DocsSearchBar";
-import { Book, Code, Shield, LifeBuoy, Terminal, Zap } from "lucide-react";
+import { Book, Code, Shield, LifeBuoy, Terminal, Zap, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
@@ -24,7 +24,14 @@ const docSections = [
   {
     icon: <Terminal />,
     title: "API Reference",
-    description: "Complete REST API documentation with authentication, endpoints, and webhooks.",
+    description: (
+      <>
+        Complete REST API documentation with authentication, endpoints, and webhooks.{" "}
+        <a href="/openapi.json" target="_blank" className="text-theme-primary hover:underline font-bold mt-1 inline-block">
+          View OpenAPI Spec
+        </a>
+      </>
+    ),
     link: "/docs/api-reference/overview",
     count: "3 articles"
   },
@@ -182,24 +189,5 @@ export default function DocsPage() {
         </div>
       </div>
     </div>
-  );
-}
-
-function ChevronRight({ size = 16, className = "" }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="m9 18 6-6-6-6" />
-    </svg>
   );
 }

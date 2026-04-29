@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import LoadingBar from "@/components/ui/LoadingBar";
@@ -7,6 +8,21 @@ import BlueprintSectionNav from "@/components/blueprint/BlueprintSectionNav";
 import OrchestratorShowcase from "@/components/blueprint/OrchestratorShowcase";
 import MarketplaceTemplate from "@/components/blueprint/MarketplaceTemplate";
 import EvolutionTimeline from "@/components/blueprint/EvolutionTimeline";
+
+export const metadata: Metadata = {
+  title: "Blueprint",
+  description:
+    "Explore the OFFER-HUB technical blueprint: orchestrator architecture, marketplace templates, and the evolution roadmap for trustless payment infrastructure.",
+  keywords: [
+    "blueprint",
+    "architecture",
+    "orchestrator",
+    "marketplace",
+    "roadmap",
+    "OFFER-HUB",
+    "payment infrastructure",
+  ],
+};
 
 export default function BlueprintPage() {
   return (

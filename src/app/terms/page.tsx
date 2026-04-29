@@ -466,7 +466,7 @@ const sections: TermsSection[] = [
           <>
             Your use of the Platform is also governed by our{" "}
             <Link
-              href="https://offer-hub.tech/privacy"
+              href="/privacy"
               className="font-bold text-theme-primary hover:text-content-primary underline underline-offset-2"
             >
               Privacy Policy
@@ -806,14 +806,12 @@ const sections: TermsSection[] = [
           </>,
           <>
             <strong>Website:</strong>{" "}
-            <a
-              href="https://offer-hub.tech"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/"
               className="font-bold text-theme-primary hover:text-content-primary"
             >
               https://offer-hub.tech
-            </a>
+            </Link>
           </>,
         ],
       },

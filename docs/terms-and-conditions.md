@@ -1,7 +1,7 @@
 # Terms and Conditions — OFFER-HUB
 
 **Effective Date:** March 28, 2026
-**Last Updated:** March 28, 2026
+**Last Updated:** April 28, 2026
 
 ---
 
@@ -265,7 +265,15 @@ We are not liable for any modification, suspension, or discontinuation of the Pl
 
 ## 14. Third-Party Services
 
-The Platform integrates with third-party services including but not limited to Airtm, Trustless Work, Stellar network, and Supabase. Your use of third-party services is subject to their respective terms and privacy policies. OFFER-HUB is not responsible for the practices or content of any third-party service.
+The Platform integrates with third-party services to provide essential functionality. By using the Platform, you acknowledge that your data may be processed by the following primary processors:
+
+- **Supabase:** For database storage, user authentication, and application infrastructure.
+- **ipapi.co:** For IP-based geolocation to provide regional content and security monitoring.
+- **GitHub:** via public APIs to integrate contributor and repository metadata.
+- **Airtm:** For fiat-to-crypto payment processing, currency conversion, and balance management.
+- **Trustless Work / Stellar:** For executing and settling blockchain-based escrow transactions on the Stellar network.
+
+Your use of these third-party services is subject to their respective terms of service and privacy policies. OFFER-HUB is not responsible for the practices, data handling, or content of any third-party service. For a detailed list of data shared and purposes, please refer to our [Privacy Policy](https://offer-hub.tech/privacy).
 
 ---
 

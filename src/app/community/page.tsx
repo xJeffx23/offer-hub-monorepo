@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import HeroRepoStatsSection from "@/components/community/HeroRepoStatsSection";
 import ContributorsSection from "@/components/community/ContributorsSection";
 import HowToContribute from "@/components/community/HowToContribute";
@@ -9,6 +10,20 @@ import RegistrationForm from "@/components/community/RegistrationForm";
 import LoadingBar from "@/components/ui/LoadingBar";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+
+export const metadata: Metadata = {
+  title: "Community",
+  description:
+    "Join the OFFER-HUB open-source community. Explore contributors, open issues, recent pull requests, and learn how to get involved.",
+  keywords: [
+    "community",
+    "open source",
+    "contributors",
+    "GitHub",
+    "OFFER-HUB",
+    "contribute",
+  ],
+};
 
 interface RepoStats {
   stars: string;
