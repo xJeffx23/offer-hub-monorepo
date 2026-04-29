@@ -3,6 +3,7 @@ import { supabase, isSupabaseConfigured } from './supabase';
 // Generate a unique visitor ID (fingerprint)
 export function generateVisitorId(): string {
   const getOrCreateVisitorId = () => {
+    if (localStorage.getItem('cookie_consent') !== 'accepted') return '';
     const stored = localStorage.getItem('visitor_id');
     if (stored) return stored;
 
@@ -133,6 +134,9 @@ export async function getGeolocation() {
 
 // Track page view
 export async function trackPageView(pagePath: string, pageTitle?: string) {
+  if (typeof window !== 'undefined' && localStorage.getItem('cookie_consent') !== 'accepted') {
+    return;
+  }
   // Skip tracking if Supabase is not properly configured
   if (!isSupabaseConfigured) {
     return;

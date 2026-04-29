@@ -57,6 +57,10 @@ export default function DocsSearchBar() {
                 setIsOpen(false);
             }
         };
+
+        const parent = searchRef.current?.closest(".overflow-hidden");
+        if (parent) (parent as HTMLElement).style.overflow = "visible";
+
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
@@ -125,7 +129,14 @@ export default function DocsSearchBar() {
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         onKeyDown={handleKeyDown}
-                        className="bg-transparent flex-1 outline-none text-content-primary placeholder:text-content-secondary w-full"
+                        role="combobox"
+                        aria-expanded={isOpen && results.length > 0}
+                        aria-haspopup="listbox"
+                        aria-controls="docs-search-results"
+                        aria-label="Documentation search"
+                        aria-autocomplete="list"
+                        aria-activedescendant={activeIndex >= 0 ? `result-item-${results[activeIndex]?.item.id}` : undefined}
+                        className="bg-transparent flex-1 text-content-primary placeholder:text-content-secondary w-full rounded-md focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-sunken"
                     />
                     {query ? (
                         <button
@@ -148,18 +159,26 @@ export default function DocsSearchBar() {
             </div>
 
             {isOpen && results.length > 0 && (
-                <div className="absolute top-full mt-3 w-full rounded-2xl overflow-hidden z-[100] animate-in fade-in slide-in-from-top-2 duration-200 bg-bg-elevated/95 border border-theme-border/40 shadow-neu-raised backdrop-blur-xl">
-                    <div className="max-h-[450px] overflow-y-auto">
+                <div 
+                    id="docs-search-results"
+                    role="listbox"
+                    className="absolute top-full left-0 mt-3 w-full rounded-2xl z-[150] animate-in fade-in slide-in-from-top-2 duration-200 bg-bg-elevated border border-theme-border/40 shadow-2xl shadow-black/10 backdrop-blur-md"
+                >
+                    <div className="max-h-[480px] overflow-y-auto scrollbar-thin">
                         {results.map((result, idx) => (
-                            <div
+                            <button
+                                id={`result-item-${result.item.id}`}
                                 key={result.item.id}
+                                type="button"
+                                role="option"
+                                aria-selected={activeIndex === idx}
                                 onMouseEnter={() => setActiveIndex(idx)}
                                 onClick={() => {
                                     router.push(result.item.link);
                                     setIsOpen(false);
                                     setQuery("");
                                 }}
-                                className="p-4 flex items-start gap-4 cursor-pointer transition-colors"
+                                className="w-full p-4 flex items-start gap-4 cursor-pointer transition-colors text-left appearance-none border-0 bg-transparent"
                                 style={{
                                     backgroundColor: activeIndex === idx ? "rgba(20, 154, 155, 0.08)" : "transparent",
                                 }}
@@ -181,7 +200,7 @@ export default function DocsSearchBar() {
                                         {highlightMatch(result.item.content, result.matches, "content")}
                                     </p>
                                 </div>
-                            </div>
+                            </button>
                         ))}
                     </div>
                     <div className="p-3 flex justify-between items-center text-[10px] font-bold tracking-wider uppercase bg-bg-sunken/60 text-content-secondary border-t border-theme-border/40">
@@ -204,6 +223,11 @@ export default function DocsSearchBar() {
                     <p className="text-sm mt-1 text-content-secondary/80">Try a different search term</p>
                 </div>
             )}
+
+            <div className="sr-only" aria-live="polite" aria-atomic="true">
+                {isOpen && results.length > 0 ? `${results.length} results found` : ""}
+                {isOpen && query.length > 1 && results.length === 0 ? "No results found" : ""}
+            </div>
         </div>
     );
 }

@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const doc = getDocBySlug(slug.join("/"));
-  if (!doc) return {};
+  if (!doc) notFound();
 
   return {
     title: `${doc.frontmatter.title} — OFFER-HUB Docs`,
@@ -29,9 +29,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function DocPage({ params }: PageProps) {
   const { slug } = await params;
-  const doc = getDocBySlug(slug.join("/"));
+  const requestedSlug = slug.join("/");
 
-  if (!doc) notFound();
+  if (!getAllDocSlugs().includes(requestedSlug)) {
+    notFound();
+  }
+
+  const doc = getDocBySlug(requestedSlug);
+
+  if (!doc) {
+    notFound();
+  }
 
   return (
     <article className="min-w-0">

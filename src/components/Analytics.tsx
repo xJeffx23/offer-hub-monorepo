@@ -8,8 +8,9 @@ export default function Analytics() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Fire-and-forget: don't block rendering/navigation
-    trackPageView(pathname);
+    if (localStorage.getItem("cookie_consent") === "accepted") {
+      trackPageView(pathname);
+    }
   }, [pathname]);
 
   // This component renders nothing

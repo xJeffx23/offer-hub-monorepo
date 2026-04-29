@@ -132,9 +132,10 @@ export function FloatingCTA() {
           {/* Animated border wrapper */}
           <div className="animated-border-wrapper shadow-neu-raised hover:shadow-neu-raised-hover transition-shadow duration-300 group-hover:translate-y-0.5">
             {/* CTA Card */}
-            <div
+            <button
+              type="button"
               onClick={handleClick}
-              className="animated-border-inner cursor-pointer px-4 py-3 md:px-6 md:py-5 max-w-[240px] md:max-w-[280px]"
+              className="animated-border-inner appearance-none border-0 text-left cursor-pointer px-4 py-3 md:px-6 md:py-5 max-w-[240px] md:max-w-[280px] w-full"
             >
               <div className="flex flex-col">
                 {/* Content */}
@@ -152,14 +153,14 @@ export function FloatingCTA() {
               </div>
 
               {/* CTA Button */}
-              <button className="mt-3 md:mt-4 w-full py-2 md:py-2.5 rounded-xl bg-theme-primary text-white text-[10px] md:text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:bg-theme-primary-hover transition-colors group/btn">
+              <div className="mt-3 md:mt-4 w-full py-2 md:py-2.5 rounded-xl bg-theme-primary text-white text-[10px] md:text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:bg-theme-primary-hover transition-colors group/btn">
                 Get Started
                 <ArrowRight
                   size={14}
                   className="group-hover/btn:translate-x-0.5 transition-transform"
                 />
-              </button>
-            </div>
+              </div>
+            </button>
           </div>
         </div>
       </div>

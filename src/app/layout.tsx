@@ -7,6 +7,7 @@ import { ClientBackground } from "@/components/layout/ClientBackground";
 import { NavigationProgress } from "@/components/ui/NavigationProgress";
 import { FloatingCTA } from "@/components/ui/FloatingCTA";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -108,6 +109,7 @@ export default function RootLayout({
           <ClientBackground />
           {children}
           <FloatingCTA />
+          <CookieConsentBanner />
         </ThemeProvider>
       </body>
     </html>

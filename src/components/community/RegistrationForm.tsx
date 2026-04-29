@@ -107,7 +107,7 @@ export default function RegistrationForm() {
                         <label className="text-[10px] font-black uppercase tracking-widest text-content-secondary ml-2">Full Name</label>
                         <div className="relative group">
                             <User size={16} className="absolute left-5 top-1/2 -translate-y-1/2 text-content-muted group-focus-within:text-theme-primary transition-colors" />
-                            <input required type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="John Doe" disabled={isLoading} className="w-full pl-12 pr-6 py-3.5 rounded-xl bg-bg-sunken shadow-neu-sunken-subtle text-sm text-content-primary placeholder:text-content-muted border-none outline-none focus:ring-2 focus:ring-theme-primary transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed" />
+                            <input required type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="John Doe" disabled={isLoading} className="w-full pl-12 pr-6 py-3.5 rounded-xl bg-bg-sunken shadow-neu-sunken-subtle text-sm text-content-primary placeholder:text-content-muted border-none transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary" />
                         </div>
                     </div>
 
@@ -115,7 +115,7 @@ export default function RegistrationForm() {
                         <label className="text-[10px] font-black uppercase tracking-widest text-content-secondary ml-2">Email Address</label>
                         <div className="relative group">
                             <Mail size={16} className="absolute left-5 top-1/2 -translate-y-1/2 text-content-muted group-focus-within:text-theme-primary transition-colors" />
-                            <input required type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="john@example.com" disabled={isLoading} className="w-full pl-12 pr-6 py-3.5 rounded-xl bg-bg-sunken shadow-neu-sunken-subtle text-sm text-content-primary placeholder:text-content-muted border-none outline-none focus:ring-2 focus:ring-theme-primary transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed" />
+                            <input required type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="john@example.com" disabled={isLoading} className="w-full pl-12 pr-6 py-3.5 rounded-xl bg-bg-sunken shadow-neu-sunken-subtle text-sm text-content-primary placeholder:text-content-muted border-none transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary" />
                         </div>
                     </div>
 
@@ -123,7 +123,7 @@ export default function RegistrationForm() {
                         <label className="text-[10px] font-black uppercase tracking-widest text-content-secondary ml-2">For what would you use Offer Hub?</label>
                         <div className="relative group">
                             <MessageSquare size={16} className="absolute left-5 top-6 text-content-muted group-focus-within:text-theme-primary transition-colors" />
-                            <textarea required rows={3} name="purpose" value={formData.purpose} onChange={handleInputChange} placeholder="Tell us about your marketplace or project..." disabled={isLoading} className="w-full pl-12 pr-6 py-3.5 rounded-xl bg-bg-sunken shadow-neu-sunken-subtle text-sm text-content-primary placeholder:text-content-muted border-none outline-none focus:ring-2 focus:ring-theme-primary transition-all font-medium resize-none disabled:opacity-50 disabled:cursor-not-allowed" />
+                            <textarea required rows={3} name="purpose" value={formData.purpose} onChange={handleInputChange} placeholder="Tell us about your marketplace or project..." disabled={isLoading} className="w-full pl-12 pr-6 py-3.5 rounded-xl bg-bg-sunken shadow-neu-sunken-subtle text-sm text-content-primary placeholder:text-content-muted border-none transition-all font-medium resize-none disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary" />
                         </div>
                     </div>
 
@@ -131,7 +131,7 @@ export default function RegistrationForm() {
                         <label className="text-[10px] font-black uppercase tracking-widest text-content-secondary ml-2">How did you hear about us?</label>
                         <div className="relative group">
                             <Send size={16} className="absolute left-5 top-1/2 -translate-y-1/2 text-content-muted group-focus-within:text-theme-primary transition-colors" />
-                            <input required type="text" name="referral" value={formData.referral} onChange={handleInputChange} placeholder="X, Telegram, Friend, etc." disabled={isLoading} className="w-full pl-12 pr-6 py-3.5 rounded-xl bg-bg-sunken shadow-neu-sunken-subtle text-sm text-content-primary placeholder:text-content-muted border-none outline-none focus:ring-2 focus:ring-theme-primary transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed" />
+                            <input required type="text" name="referral" value={formData.referral} onChange={handleInputChange} placeholder="X, Telegram, Friend, etc." disabled={isLoading} className="w-full pl-12 pr-6 py-3.5 rounded-xl bg-bg-sunken shadow-neu-sunken-subtle text-sm text-content-primary placeholder:text-content-muted border-none transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary" />
                         </div>
                     </div>
 

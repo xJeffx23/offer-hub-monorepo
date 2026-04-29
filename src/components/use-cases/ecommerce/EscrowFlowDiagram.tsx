@@ -120,7 +120,7 @@ function StepCard({
   onActivate: () => void;
   onDeactivate: () => void;
 }) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLButtonElement>(null);
   const Icon = step.icon;
 
   const handleBlur = useCallback(
@@ -136,10 +136,9 @@ function StepCard({
   );
 
   return (
-    <div
+    <button
+      type="button"
       ref={cardRef}
-      tabIndex={0}
-      role="button"
       aria-expanded={isActive}
       aria-label={`Step ${step.stepNumber}: ${step.label}`}
       className={cn(
@@ -191,7 +190,7 @@ function StepCard({
       <AnimatePresence>
         {isActive && <HoverDetailPanel step={step} />}
       </AnimatePresence>
-    </div>
+    </button>
   );
 }
 

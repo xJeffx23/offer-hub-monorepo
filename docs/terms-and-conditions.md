@@ -175,6 +175,18 @@ Your use of the Platform is also governed by our [Privacy Policy](https://offer-
 
 We collect and process personal data to operate the Platform, improve services, prevent fraud, and comply with legal obligations. We do not sell personal data to third parties.
 
+### 9.1 GDPR Rights — Data Deletion and Export
+
+In compliance with GDPR Articles 17 (right to erasure) and 20 (data portability), users may request deletion or export of their personal data at any time via the following endpoints:
+
+- **DELETE — `POST /api/privacy/delete`**
+  Accepts a JSON body `{ "email": "user@example.com" }`. Permanently removes all waitlist records associated with the provided email address. Returns `200` on success, `404` if no record exists, `400` for invalid input, or `503` if the service is temporarily unavailable. Deletion is confirmed within 30 days of a valid request as required by GDPR.
+
+- **EXPORT — `POST /api/privacy/export`**
+  Accepts a JSON body `{ "email": "user@example.com" }`. Returns a JSON object containing all stored personal data for that email address. Returns `200` with `{ "data": { ... } }` on success, `404` if no record exists, or the appropriate error code otherwise.
+
+Both endpoints validate the email format and respond with structured error messages. They are also accessible via the self-service form at [/privacy](https://offer-hub.tech/privacy) under the "Your Data Rights" section.
+
 ---
 
 ## 10. Confidentiality
@@ -260,7 +272,15 @@ We are not liable for any modification, suspension, or discontinuation of the Pl
 
 ## 14. Third-Party Services
 
-The Platform integrates with third-party services including but not limited to Airtm, Trustless Work, Stellar network, and Supabase. Your use of third-party services is subject to their respective terms and privacy policies. OFFER-HUB is not responsible for the practices or content of any third-party service.
+The Platform integrates with third-party services to provide essential functionality. By using the Platform, you acknowledge that your data may be processed by the following primary processors:
+
+- **Supabase:** For database storage, user authentication, and application infrastructure.
+- **ipapi.co:** For IP-based geolocation to provide regional content and security monitoring.
+- **GitHub:** via public APIs to integrate contributor and repository metadata.
+- **Airtm:** For fiat-to-crypto payment processing, currency conversion, and balance management.
+- **Trustless Work / Stellar:** For executing and settling blockchain-based escrow transactions on the Stellar network.
+
+Your use of these third-party services is subject to their respective terms of service and privacy policies. OFFER-HUB is not responsible for the practices, data handling, or content of any third-party service. For a detailed list of data shared and purposes, please refer to our [Privacy Policy](https://offer-hub.tech/privacy).
 
 ---
 

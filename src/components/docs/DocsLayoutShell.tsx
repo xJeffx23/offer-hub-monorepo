@@ -55,6 +55,16 @@ export function DocsLayoutShell({ nav, children }: DocsLayoutShellProps) {
     return rest.filter(Boolean);
   }, [pathname]);
 
+  const currentDocSlug = pathSegments.join("/");
+
+  const isKnownDocPage = useMemo(() => {
+    if (!currentDocSlug) return false;
+
+    return nav.some((section) =>
+      section.links.some((link) => link.slug === currentDocSlug)
+    );
+  }, [currentDocSlug, nav]);
+
   useEffect(() => {
     setIsDrawerOpen(false);
   }, [pathname]);
@@ -132,9 +142,9 @@ export function DocsLayoutShell({ nav, children }: DocsLayoutShellProps) {
 
 
             {/* Actions toolbar */}
-            {!isHub && (
+            {!isHub && isKnownDocPage && (
               <div className="flex items-center justify-start md:justify-end">
-                <DocActionsMenu slug={pathname.replace("/docs/", "")} />
+                <DocActionsMenu slug={currentDocSlug} />
               </div>
             )}
           </div>
