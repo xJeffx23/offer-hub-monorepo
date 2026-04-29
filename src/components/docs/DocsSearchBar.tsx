@@ -58,7 +58,6 @@ export default function DocsSearchBar() {
             }
         };
 
-        // Fix parent overflow-hidden clipping issue
         const parent = searchRef.current?.closest(".overflow-hidden");
         if (parent) (parent as HTMLElement).style.overflow = "visible";
 
@@ -137,7 +136,7 @@ export default function DocsSearchBar() {
                         aria-label="Documentation search"
                         aria-autocomplete="list"
                         aria-activedescendant={activeIndex >= 0 ? `result-item-${results[activeIndex]?.item.id}` : undefined}
-                        className="bg-transparent flex-1 outline-none text-content-primary placeholder:text-content-secondary w-full"
+                        className="bg-transparent flex-1 text-content-primary placeholder:text-content-secondary w-full rounded-md focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-sunken"
                     />
                     {query ? (
                         <button
@@ -224,7 +223,6 @@ export default function DocsSearchBar() {
                 </div>
             )}
 
-            {/* Screen reader live region for announcing search results */}
             <div className="sr-only" aria-live="polite" aria-atomic="true">
                 {isOpen && results.length > 0 ? `${results.length} results found` : ""}
                 {isOpen && query.length > 1 && results.length === 0 ? "No results found" : ""}

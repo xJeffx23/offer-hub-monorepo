@@ -64,7 +64,7 @@ export default function PrivacyPage() {
             Privacy is a feature, not an afterthought.
           </p>
           <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bg-elevated shadow-neu-raised-sm text-xs font-bold text-content-secondary">
-            Last updated: <span className="text-theme-primary">February 25, 2026</span>
+            Last updated: <span className="text-theme-primary">April 28, 2026</span>
           </div>
         </div>
 
@@ -98,6 +98,85 @@ export default function PrivacyPage() {
               </div>
             );
           })}
+        </div>
+
+        {/* Third-Party Data Processors */}
+        <div className="mt-24 mb-24 animate-fadeInUp">
+          <div className="flex flex-col gap-6 mb-12">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-content-primary">
+              Third-Party <span className="text-theme-primary">Data Processors</span>
+            </h2>
+            <p className="text-lg font-medium text-content-secondary max-w-3xl leading-relaxed">
+              To provide our services, we share limited data with the following third-party processors. Each processor is carefully vetted and processes data only for specific, disclosed purposes.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Processors list */}
+            {[
+              {
+                name: "Supabase",
+                purpose: "Database storage and user authentication",
+                data: "Email, hashed passwords, profile information, and application state metrics.",
+                region: "Data stored in EU or US depending on project region.",
+                link: "https://supabase.com/privacy",
+              },
+              {
+                name: "ipapi.co",
+                purpose: "IP-based geolocation and security monitoring",
+                data: "User IP address (collected on every page view to determine region and prevent abuse).",
+                link: "https://ipapi.co/privacy/",
+              },
+              {
+                name: "GitHub",
+                purpose: "Public API for fetching contributor and repository data",
+                data: "GitHub usernames and public profile information associated with contributions.",
+                link: "https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement",
+              },
+              {
+                name: "Airtm",
+                purpose: "Fiat-to-crypto payment processing and balance management",
+                data: "User identifiers, transaction amounts, and currency preferences.",
+                link: "https://www.airtm.com/en/privacy-policy/",
+              },
+              {
+                name: "Trustless Work / Stellar",
+                purpose: "Blockchain-based escrow and transaction settlement",
+                data: "Public wallet addresses and transaction metadata (stored immutably on-chain).",
+                link: "https://trustlesswork.com/privacy",
+              },
+            ].map((processor) => (
+              <div key={processor.name} className="p-8 rounded-[2rem] bg-bg-elevated shadow-neu-raised flex flex-col gap-4 border border-theme-primary/5 hover:shadow-neu-raised-hover transition-all duration-300">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-black text-content-primary">{processor.name}</h3>
+                  <a
+                    href={processor.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-bold text-theme-primary hover:underline flex items-center gap-1"
+                  >
+                    Privacy Policy <Link2 size={12} />
+                  </a>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-content-secondary block mb-1">Purpose</span>
+                    <p className="text-sm font-medium text-content-secondary leading-relaxed">{processor.purpose}</p>
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-content-secondary block mb-1">Data Shared</span>
+                    <p className="text-sm font-medium text-content-secondary leading-relaxed">{processor.data}</p>
+                  </div>
+                  {processor.region && (
+                    <div>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-content-secondary block mb-1">Information</span>
+                      <p className="text-sm font-medium text-content-secondary leading-relaxed">{processor.region}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Contact card */}

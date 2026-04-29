@@ -166,7 +166,7 @@ export function EndpointPanel({ endpoint }: EndpointPanelProps) {
                     value={bodyValue}
                     onChange={(e) => setBodyValue(e.target.value)}
                     rows={Math.min(bodyValue.split("\n").length + 1, 12)}
-                    className="w-full rounded-xl px-4 py-3 text-sm font-mono text-content-primary outline-none resize-y transition-all"
+                    className="w-full rounded-xl px-4 py-3 text-sm font-mono text-content-primary resize-y transition-all focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-0"
                     style={{
                       background: "var(--color-bg-sunken)",
                       boxShadow: "inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light)",
