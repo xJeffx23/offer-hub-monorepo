@@ -87,8 +87,9 @@ Before submitting a change, ensure you:
 1. Create a branch from `main`.
 2. Make your changes and use atomic commits.
 3. Ensure the project builds correctly (`npm run build`).
-4. Open a PR using our Pull Request template.
-5. Wait for a maintainer's review.
+4. **If your PR introduces a user-facing change** (new feature, bug fix, deprecation, breaking change, or security patch), add an entry to the `[Unreleased]` section of [`CHANGELOG.md`](../CHANGELOG.md) at the repository root. Follow the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and place the change under the appropriate category: `Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, or `Security`.
+5. Open a PR using our Pull Request template.
+6. Wait for a maintainer's review.
 
 ## Roadmap & Tasks
 
