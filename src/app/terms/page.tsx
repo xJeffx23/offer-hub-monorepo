@@ -639,7 +639,17 @@ const sections: TermsSection[] = [
           </>
         ),
       },
-      { type: "h3", children: "12.4 Jurisdiction" },
+            { type: "h3", children: "12.4 European Union Users" },
+      {
+        type: "ul",
+        items: [
+          "GDPR applies to EU users and their rights under Articles 15–22 are preserved.",
+          "EU users may lodge complaints with their national Data Protection Authority.",
+          "The platform's Data Protection contact is legal@offerhub.io.",
+          "EU users have the right to withdraw consent for data processing at any time.",
+        ],
+      },
+      { type: "h3", children: "12.5 Jurisdiction" },
       {
         type: "p",
         children: (
@@ -873,7 +883,7 @@ export default function TermsOfServicePage() {
               By using our tools, you agree to these principles of operation.
             </p>
             <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-bg-elevated shadow-raised-sm text-xs font-bold text-content-secondary">
-              Last updated: <span className="text-theme-primary">March 28, 2026</span>
+              Last updated: <span className="text-theme-primary">April 29, 2026</span>
             </div>
           </header>
 

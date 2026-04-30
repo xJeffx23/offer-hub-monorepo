@@ -1,7 +1,7 @@
 # Terms and Conditions — OFFER-HUB
 
 **Effective Date:** March 28, 2026
-**Last Updated:** April 28, 2026
+**Last Updated:** April 29, 2026
 
 ---
 
@@ -245,7 +245,14 @@ Any dispute, claim, or controversy arising out of or relating to these Terms or 
 
 These Terms are governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions. For users outside the United States, mandatory local consumer protection laws may apply.
 
-### 12.4 Jurisdiction
+### 12.4 European Union Users
+
+- GDPR applies to EU users and their rights under Articles 15–22 are preserved.
+- EU users may lodge complaints with their national Data Protection Authority.
+- The platform's Data Protection contact is legal@offerhub.io.
+- EU users have the right to withdraw consent for data processing at any time.
+
+### 12.5 Jurisdiction
 
 For any disputes not subject to arbitration, you consent to the exclusive jurisdiction of the state and federal courts located in Delaware, United States.
 
