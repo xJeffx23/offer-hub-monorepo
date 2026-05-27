@@ -46,6 +46,7 @@ OFFER-HUB documentation is organized in two locations:
 - [Events Reference](./guides/events-reference.md) - SSE and webhook events
 - [Errors & Troubleshooting](./guides/errors-troubleshooting.md) - Error codes and solutions
 - [Marketplace Integration](./guides/marketplace-integration.md) - Integration patterns
+- [Security Best Practices](./guides/security.md) - API keys, webhooks, wallet security, and blockchain-specific threats
 - [Deployment](./guides/deployment.md) - Production deployment
 - [Scaling & Customization](./guides/scaling-customization.md) - Advanced configuration
 - [AirTM Integration](./guides/airtm.md) - AirTM payment provider

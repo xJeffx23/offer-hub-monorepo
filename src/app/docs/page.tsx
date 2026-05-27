@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import DocsSearchBar from "@/components/docs/DocsSearchBar";
-import { Book, Code, Shield, LifeBuoy, Terminal, Zap, ChevronRight } from "lucide-react";
+import { Book, Code, Shield, LifeBuoy, Terminal, Zap, ChevronRight, Lock } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
@@ -55,6 +55,13 @@ const docSections = [
     description: "Deploy OFFER-HUB on your own infrastructure with Docker and configure it.",
     link: "/docs/guide/self-hosting",
     count: "2 articles"
+  },
+  {
+    icon: <Lock />,
+    title: "Security Best Practices",
+    description: "API key management, webhook validation, wallet key security, and blockchain-specific attack mitigations.",
+    link: "/docs/guide/security",
+    count: "1 guide"
   }
 ];
 
