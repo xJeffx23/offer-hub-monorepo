@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { X, ArrowRight } from "lucide-react";
 
 const STORAGE_KEY = "offer-hub-cta-dismissed";
@@ -50,6 +50,7 @@ const rotatingBorderStyles = `
 
 export function FloatingCTA() {
   const pathname = usePathname();
+  const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -101,8 +102,8 @@ export function FloatingCTA() {
   };
 
   const handleClick = () => {
-    // Navigate to home page waitlist section
-    window.location.href = "/#waitlist-form";
+    // Navigate to home page waitlist section using client-side navigation
+    router.push("/#waitlist-form");
   };
 
   if (!isAnimating) return null;
