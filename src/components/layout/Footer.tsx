@@ -28,6 +28,7 @@ const navColumns = [
     links: [
       { href: "/terms", label: "Terms of Service" },
       { href: "/privacy", label: "Privacy Policy" },
+      { href: "/accessibility", label: "Accessibility" },
     ],
   },
 ];
