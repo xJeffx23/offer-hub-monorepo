@@ -1,17 +1,15 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Menu, X, ChevronRight, Home
-} from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 import type { Heading, SidebarSection } from "@/lib/mdx";
 import { BackToTopButton } from "@/components/docs/BackToTopButton";
 import { DocsSidebar } from "@/components/docs/DocsSidebar";
 import { TableOfContents } from "@/components/docs/TableOfContents";
 import { Navbar } from "@/components/layout/Navbar";
+import { Breadcrumb } from "@/components/docs/Breadcrumb";
 import { FileCode2, FileText, Github } from "lucide-react";
 
 // Use production URL for AI assistant links
@@ -20,12 +18,6 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://offer-hub.tech";
 interface DocsLayoutShellProps {
   nav: SidebarSection[];
   children: React.ReactNode;
-}
-
-function formatSegment(segment: string) {
-  return decodeURIComponent(segment)
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
 function collectHeadingsFromPage(): Heading[] {
@@ -98,7 +90,7 @@ export function DocsLayoutShell({ nav, children }: DocsLayoutShellProps) {
         <div className="max-w-6xl xl:max-w-7xl mx-auto px-6 lg:px-8 mb-16">
           <div className="relative z-40 flex flex-col md:flex-row md:items-center justify-between gap-6">
 
-            {/* Breadcrumb - Differentiated colors, no bold */}
+            {/* Breadcrumb navigation */}
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 overflow-hidden flex-1">
               <button
                 type="button"
@@ -109,36 +101,11 @@ export function DocsLayoutShell({ nav, children }: DocsLayoutShellProps) {
                 <Menu size={20} />
               </button>
 
-              <div className="flex items-center gap-2 text-[14px] whitespace-nowrap overflow-x-auto no-scrollbar py-1">
-                {!isHub ? (
-                  <>
-                    <Link href="/docs" className="text-[#149A9B] hover:text-[#149A9B]/80 transition-colors font-medium flex items-center gap-1.5">
-                      <Home size={15} />
-                      Docs
-                    </Link>
-                    {pathSegments.map((segment, index) => {
-                      const href = `/docs/${pathSegments.slice(0, index + 1).join("/")}`;
-                      const isLast = index === pathSegments.length - 1;
-                      return (
-                        <span key={`${segment}-${index}`} className="flex items-center gap-2">
-                          <ChevronRight size={14} className="text-content-secondary/30" />
-                          {isLast ? (
-                            <span className="text-content-primary font-medium">
-                              {formatSegment(segment)}
-                            </span>
-                          ) : (
-                            <Link href={href} className="text-content-secondary hover:text-content-primary transition-colors font-medium">
-                              {formatSegment(segment)}
-                            </Link>
-                          )}
-                        </span>
-                      );
-                    })}
-                  </>
-                ) : (
-                  <span className="text-content-primary font-bold tracking-tight opacity-40 italic">Documentation Index</span>
-                )}
-              </div>
+              {isHub ? (
+                <span className="text-content-primary font-bold tracking-tight opacity-40 italic text-[14px]">Documentation Index</span>
+              ) : (
+                <Breadcrumb />
+              )}
             </nav>
 
 
