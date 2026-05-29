@@ -103,7 +103,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased relative min-h-screen`}>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-6 focus:left-6 focus:z-[9999] px-8 py-10 rounded-full text-sm font-semibold btn-neumorphic-primary outline-none transition-none"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-6 focus:left-6  focus:z-[9999] px-8 py-10 rounded-full text-sm font-semibold btn-neumorphic-primary outline-none transition-none"
         >
           Skip to main content
         </a>
@@ -113,9 +113,9 @@ export default function RootLayout({
           </Suspense>
           <Analytics />
           <ClientBackground />
-          <main id="main-content">
+          <div id="main-content">
             {children}
-          </main>
+          </div>
           <FloatingCTA />
           <CookieConsentBanner />
         </ThemeProvider>
