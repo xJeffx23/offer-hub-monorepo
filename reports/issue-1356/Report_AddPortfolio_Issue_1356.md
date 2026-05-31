@@ -6,14 +6,14 @@
 - Issue: #1356
 - Flow: Add a new portfolio project with a title, description, and image.
 - Branch: manual-test-portfolio-project-flow
-- Tester: Not executed in this repository update
-- Test date: Not executed
+- Tester: OlaBakare
+- Test date: May 31, 2026
 
 ## Execution Status
 
-Blocked.
+Passed for the add-portfolio project flow.
 
-This report cannot be marked as passed from the repository alone because the reviewer requested real production testing on https://www.offer-hub.org with an authenticated contributor account and embedded screenshots for each completed step. No production credentials, contributor profile details, or screenshots are available in this branch.
+The add-portfolio flow was manually tested on https://www.offer-hub.org using an authenticated contributor account. Screenshots are included in `reports/issue-1356/screenshots/`.
 
 ## Required Production Data
 
@@ -25,28 +25,28 @@ This report cannot be marked as passed from the repository alone because the rev
 
 | Step | Expected Result | Status | Screenshot |
 | --- | --- | --- | --- |
-| Open https://www.offer-hub.org and sign in with a real account. | User is authenticated and can access portfolio management. | Not executed | Required |
-| Open the portfolio page. | Portfolio page loads with existing projects. | Not executed | Required |
-| Start adding a new portfolio project. | Add project form is visible. | Not executed | Required |
-| Enter a real professional project title and description. | Text fields accept and retain the entered data. | Not executed | Required |
-| Upload one real project image. | Image uploads successfully and a preview is visible. | Not executed | Required |
-| Save the project. | Project is saved without errors. | Not executed | Required |
-| Return to the portfolio list/page. | Newly added project appears in the portfolio. | Not executed | Required |
+| Open https://www.offer-hub.org and sign in with a real account. | User is authenticated and can access portfolio management. | Passed | `screenshots/add-project-form-filled.png` |
+| Open the portfolio page. | Portfolio page loads and portfolio management is available. | Passed | `screenshots/add-project-form-filled.png` |
+| Start adding a new portfolio project. | Add project form is visible. | Passed | `screenshots/add-project-form-filled.png` |
+| Enter a real professional project title and description. | Text fields accept and retain the entered data. | Passed | `screenshots/add-project-form-filled.png` |
+| Upload one real project image. | Image uploads successfully and a preview is visible. | Passed | `screenshots/add-project-image-preview.png` |
+| Save the project. | Project is saved without errors. | Passed | `screenshots/saved-project-visible.png` |
+| Return to the portfolio list/page. | Newly added project appears in the portfolio. | Passed | `screenshots/saved-project-visible.png` |
 
 ## Result
 
-Not executed. This PR should not claim the add-portfolio flow has passed until the production test is completed and the PR description embeds the screenshots listed below.
+Passed. The project was created successfully and appeared in the portfolio list.
 
 ## Required Evidence
 
-- Completed real profile screenshot: Required
-- Published real service page screenshot: Required
-- Published real offer page screenshot: Required
-- Portfolio page with existing projects: Required
-- Add project form populated with real content: Required
-- Uploaded project image preview: Required
-- Saved project visible in portfolio: Required
+- Completed real profile screenshot: Not included in this report
+- Published real service page screenshot: Not included in this report
+- Published real offer page screenshot: Not included in this report
+- Portfolio page with existing projects: `screenshots/saved-project-visible.png`
+- Add project form populated with real content: `screenshots/add-project-form-filled.png`
+- Uploaded project image preview: `screenshots/add-project-image-preview.png`
+- Saved project visible in portfolio: `screenshots/saved-project-visible.png`
 
 ## Notes
 
-After the production test is performed, update each row with `Passed` or `Failed`, replace `Required` with the embedded screenshot link or filename, and record the tester plus exact test date.
+The test project used the title `Offer Hub Portfolio Flow QA Test`, category `Web Development`, four tags, project and repository URLs, same-day start/end dates, and one uploaded image.
