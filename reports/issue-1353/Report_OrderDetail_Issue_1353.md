@@ -4,6 +4,8 @@
 **Tester:** kingiosmel  
 **Environment:** https://www.offer-hub.org
 
+> **Note:** Screenshots for order detail verification are embedded in the PR description.
+
 ---
 
 ## Test Execution Summary
@@ -73,17 +75,11 @@
 - **Amount Display:** $1,000.00  
 - **Status Badge:** Order Created
 
-**Screenshot:**
-![Order Header](screenshot5.jpg)
-
 ### Freelancer Information Section
 - **Label:** Freelancer
 - **Username:** Unknown
 - **Email:** felladaniel36@gmail.com
 - **Status:** Displayed with teal avatar badge "F"
-
-**Screenshot:**
-![Freelancer Section](screenshot6.jpg)
 
 ### Order Progress Timeline
 - **Current Stage:** Created (highlighted in teal)
@@ -94,9 +90,6 @@
   4. Complete (Stage 7) - Pending
 - **Visual Indicator:** Connected progress bar showing current position
 
-**Screenshot:**
-![Order Progress](screenshot6.jpg)
-
 ### Description Section
 - **Label:** Description
 - **Content:** "I need a full stack dev"
@@ -106,9 +99,6 @@
 - **Available Actions:**
   - ✅ Confirm Order (Primary CTA)
   - ✗ Cancel Order (Secondary CTA)
-
-**Screenshot:**
-![Order Next Steps](screenshot6.jpg)
 
 ---
 

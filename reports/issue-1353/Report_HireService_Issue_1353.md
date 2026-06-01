@@ -4,6 +4,8 @@
 **Tester:** kingiosmel  
 **Environment:** https://www.offer-hub.org
 
+> **Note:** Screenshots for each test step are embedded in the PR description.
+
 ---
 
 ## Test Execution Summary
@@ -15,14 +17,11 @@
 
 **Username:** kingiosmel  
 **Email:** josmelegh@gmail.com  
-**First Name:** Jane  
-**Last Name:** Doe  
+**First Name:** melvin  
+**Last Name:** joseph  
 **Professional Title:** Full Stack Developer  
-**Location:** San José, Costa Rica  
+**Location:** Nigeria 
 **Profile Photo:** Uploaded (Code/Programming themed image)
-
-### Profile Screenshot
-![Profile Setup](screenshot1.jpg)
 
 ---
 
@@ -36,9 +35,6 @@
 **Status:** Active  
 **Total Orders:** 0 orders
 
-### My Services Screenshot
-![My Services](screenshot2.jpg)
-
 ---
 
 ## Real Offer Published
@@ -47,10 +43,7 @@
 **Category:** Web Development  
 **Budget:** $500  
 **Status:** Active  
-**Applicants:** 0  
-
-### Manage Offers Screenshot
-![Manage Offers](screenshot3.png)
+**Applicants:** 0
 
 ---
 
@@ -73,9 +66,6 @@
 - ✓ Revisions included
 - ✓ Communication
 
-**Screenshot:**
-![Service Detail Page](screenshot4.jpg)
-
 **Result:** ✅ PASS - Service detail page loads correctly with all required information
 
 ---
@@ -97,9 +87,6 @@
 - Status: Order Created
 - Timestamp: Order created successfully with automatic redirect
 
-**Screenshot:**
-![Order Creation Confirmation](screenshot5.jpg)
-
 **Result:** ✅ PASS - Order created successfully with confirmation message displayed
 
 ---
@@ -112,9 +99,6 @@
 - Seller: felladaniel36
 - Amount: $1,000.00
 - Status: Created
-
-**Screenshot:**
-![My Orders List](screenshot6.jpg)
 
 **Result:** ✅ PASS - Order successfully appears in the orders list with correct information
 
@@ -137,9 +121,6 @@
 2. Confirmed (Next)
 3. In Progress (Pending)
 4. Complete (Pending)
-
-**Screenshot:**
-![Order Detail Page](screenshot6.jpg)
 
 **Result:** ✅ PASS - Order detail page shows all correct information
 
