@@ -125,21 +125,27 @@ export function Footer() {
                   <ul className="flex flex-col gap-3">
                     {col.links.map((link) => (
                       <li key={link.label}>
-                        <a
-                          href={link.href}
-                          onClick={(e) => {
-                            if (link.label === "Cookie Preferences") {
+                        {link.label === "Cookie Preferences" ? (
+                          <a
+                            href={link.href}
+                            onClick={(e) => {
                               e.preventDefault();
-
                               window.dispatchEvent(
                                 new CustomEvent(COOKIE_PREFERENCES_EVENT)
                               );
-                            }
-                          }}
-                          className="text-sm text-content-secondary hover:text-content-primary transition-colors duration-200"
-                        >
-                          {link.label}
-                        </a>
+                            }}
+                            className="text-sm text-content-secondary hover:text-content-primary transition-colors duration-200"
+                          >
+                            {link.label}
+                          </a>
+                        ) : (
+                          <Link
+                            href={link.href}
+                            className="text-sm text-content-secondary hover:text-content-primary transition-colors duration-200"
+                          >
+                            {link.label}
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>

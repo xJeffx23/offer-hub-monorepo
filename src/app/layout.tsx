@@ -117,6 +117,25 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <body className={`${inter.className} antialiased relative min-h-screen`}>
+        <noscript>
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              background: "#1a1a2e",
+              color: "#f1f3f7",
+              textAlign: "center",
+              padding: "12px",
+              fontFamily: "sans-serif",
+              fontSize: "14px",
+              zIndex: 9999,
+            }}
+          >
+            This site requires JavaScript to function. Please enable JavaScript in your browser settings.
+          </div>
+        </noscript>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-6 focus:left-6  focus:z-[9999] px-8 py-10 rounded-full text-sm font-semibold btn-neumorphic-primary outline-none transition-none"
