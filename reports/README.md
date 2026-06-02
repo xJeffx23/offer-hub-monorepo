@@ -1,4 +1,3 @@
-
 # Reports Directory
 
 This directory contains manual test reports for the Offer Hub project.
@@ -6,11 +5,16 @@ This directory contains manual test reports for the Offer Hub project.
 ## Report Naming Convention
 
 Reports should be named following this pattern:
+
 ```
 Report_[FeatureName]_Issue_[Number].md
 ```
 
-Example: `Report_OpenDispute_Issue_123.md`
+
+Example: `Report_AvailabilitySettings_Issue_1362.md`
+
+Reports for a given issue live under `reports/issue-[number]/`.
+
 
 ## Report Template
 
@@ -56,13 +60,6 @@ Example: `Report_OpenDispute_Issue_123.md`
 - **Status**: ✅ Pass / ❌ Fail
 - **Screenshot**: [filename]
 
-### Step 2: [Step Description]
-- **Action**: [What was done]
-- **Expected Result**: [What should happen]
-- **Actual Result**: [What actually happened]
-- **Status**: ✅ Pass / ❌ Fail
-- **Screenshot**: [filename]
-
 ## Test Results Summary
 - **Total Steps**: [Number]
 - **Passed**: [Number]
@@ -80,7 +77,6 @@ Example: `Report_OpenDispute_Issue_123.md`
 
 All screenshots should be:
 - Clear and readable
-- Named descriptively (e.g., `step1_dispute_form.png`)
+- Named descriptively (e.g., `step1_availability_page.png`)
 - Attached to the PR description
 - Referenced in the report
-
