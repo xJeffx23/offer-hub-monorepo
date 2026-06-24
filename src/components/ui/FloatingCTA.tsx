@@ -82,7 +82,7 @@ export function FloatingCTA() {
             className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-bg-base shadow-neu-raised-sm flex items-center justify-center text-content-secondary hover:text-content-primary hover:shadow-neu-raised-hover transition-all z-20"
             aria-label="Dismiss"
           >
-            <X size={12} />
+            <X size={12} aria-hidden="true" />
           </button>
 
           {/* Animated border wrapper */}
@@ -113,6 +113,7 @@ export function FloatingCTA() {
                 Get Started
                 <ArrowRight
                   size={14}
+                  aria-hidden="true"
                   className="group-hover/btn:translate-x-0.5 transition-transform"
                 />
               </div>
